@@ -8,7 +8,7 @@ from sklearn.metrics import jaccard_score
 # -------------------------------
 @st.cache_data
 def load_data():
-    df = pd.read_csv("disease_symptom_data.csv")  # Replace with your file path
+    df = pd.read_csv("training_dataset.csv")  # Replace with your file path
     X = df.drop("disease", axis=1)
     diseases = df["disease"].values
     symptoms = X.columns.tolist()
