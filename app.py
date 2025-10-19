@@ -9,8 +9,8 @@ from sklearn.metrics import jaccard_score
 @st.cache_data
 def load_data():
     df = pd.read_csv("training_dataset.csv")  # Replace with your file path
-    X = df.drop("Disease", axis=1)
-    diseases = df["Disease"].values
+    X = df.drop("disease", axis=1)
+    diseases = df["disease"].values
     symptoms = X.columns.tolist()
     return df, X, diseases, symptoms
 
